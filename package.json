@@ -2,7 +2,7 @@
   "name": "datacompanion",
   "version": "1.0.0",
   "description": "A digital datacompanion to help OBA-members control their data.",
-  "main": "app/app.js",
+  "main": "app.js",
   "scripts": {
     "dev": "nodemon app/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/qiubee/datacompanion-optimized#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "hbs": "^4.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
