@@ -1,0 +1,32 @@
+{
+  "name": "datacompanion",
+  "version": "1.0.0",
+  "description": "A digital datacompanion to help OBA-members control their data.",
+  "main": "app/app.js",
+  "scripts": {
+    "dev": "nodemon app/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiubee/datacompanion-optimized.git"
+  },
+  "keywords": [
+    "books",
+    "server",
+    "node",
+    "express"
+  ],
+  "author": "qiubee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qiubee/datacompanion-optimized/issues"
+  },
+  "homepage": "https://github.com/qiubee/datacompanion-optimized#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
