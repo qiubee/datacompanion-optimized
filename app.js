@@ -1,14 +1,28 @@
 const express = require("express");
+const hbs = require("express-handlebars");
 
+// server
 const app = express();
-const port = 8000;
+const port = 8080;
 
-app.set('view engine', 'hbs');
-app.set('views', 'views');
+// set handlebars as templating engine
+app.set("view engine", "hbs");
+app.engine( "hbs", hbs( { 
+    extname: "hbs", 
+    defaultLayout: "default", 
+    layoutsDir: __dirname + "/views/layouts/",
+    partialsDir: __dirname + "/views/partials/"
+  }));
 
-app.get('/', function (req, res) { 
-    res.send('Hello World!');
-});
+// use "public" folder for static files
+app.use(express.static("public"));
+
+// routing
+// import routes from router file
+const router = require("./router/router");
+
+// register partials
+app.use("/", router);
 
 app.listen(port, function () {
     console.log(`Listening on port ${port}`);
