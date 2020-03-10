@@ -1,0 +1,196 @@
+:root {
+    --main-font: "Lullaby";
+    --text-font: "Gribouille";
+    --oba-font: "Avenir";
+    --vivi-color: #e1e8ff;
+    --vivi-text-color: #383a40;
+    --momo-color: #fffd88;
+    --momo-text-color: #403f22;
+    /* color pallette */
+}
+
+/* fonts */
+@font-face {
+    font-family: "Avenir";
+    font-weight: 400;
+    src: url("../fonts/avenir-book.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Avenir";
+    font-weight: 600;
+    src: url("../fonts/avenir-medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Avenir";
+    font-weight: 900;
+    src: url("../fonts/avenir-heavy.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Lullaby";
+    src: url("../fonts/lullaby.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Gribouille";
+    src: url("../fonts/gribouille.ttf") format("truetype");
+}
+
+/* set margin & padding to default */
+body, ul, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* set decoration to default */
+ul, ol {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* hide elements */
+input[name="companion"], body > div:last-of-type section li span:nth-child(2) {
+    position: absolute;
+    top: -999em;
+    left: -999em;
+}
+
+/* -- global -- */
+body[data-begin], body[data-login] {
+    height: 100vh;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 2.5% 1fr 2.5%;
+    font-family: var(--text-font);
+}
+
+h1 {
+    font-family: var(--main-font);
+    transition: font-size ease 1s;
+    font-size: 1.5em;
+    max-width: 15em;
+    color: rgba(0,0,0,0.7);
+}
+
+h1:first-letter {
+    font-size: 135%;
+}
+
+/* -- specific -- */
+body[data-begin] {
+    background-image: linear-gradient( 155deg, var(--vivi-color) 15%, var(--momo-color) 90%);
+    text-align: center;
+}
+
+body[data-begin] > h1 {
+    margin: 25vh auto auto auto;
+    font-size: 2.1em;
+    grid-column: 2;
+}
+
+a[href$="login"] {
+    grid-column: 2;
+    font-family: var(--main-font);
+    font-size: 2em;
+    color: var(--momo-text-color);
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: auto auto 10vh auto;
+    padding: 0.15em;
+    transition: font-size ease 0.25s, translate ease 0.75s;
+}
+
+a[href$="login"]:before {
+    content: "begin";
+    position: absolute;
+    margin: 0.075em 0;
+    opacity: 0.45;
+}
+
+a[href$="login"]:hover {
+    translate: 0 0.25em;
+    font-size: calc(2em * 1.2);
+}
+
+/* login */
+body[data-login] {
+    background-image: linear-gradient( 165deg, var(--momo-color) 50%, var(--vivi-color));
+}
+
+body[data-login] h1 {
+    text-align: center;
+    margin: auto;
+    grid-column: 2;
+}
+
+form[action$="login"] {
+    display: grid;
+    grid-template-rows: 60% 15% 15% 10%;
+    grid-column: 2;
+}
+
+form[action$="login"] div {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--oba-font);
+    font-weight: 900;
+    max-width: 16em;
+    margin: auto;
+}
+
+form[action$="login"] label:last-of-type {
+    margin-top: 1em;
+}
+
+form[action$="login"] input {
+    padding: 0.25em;
+}
+
+form[action$="login"] button {
+    grid-row: 3;
+}
+
+/* -- Queries -- */
+@media (min-width: 30em) and (max-width: 60em) {
+    h1 {
+        font-size: 1.75em;
+    }
+    
+    body[data-begin] > h1 {
+        font-size: 3em;
+    }
+    
+    a[href$="login"] {
+        font-size: 2.5em;
+    }
+    
+    a[href$="login"]:hover {
+        font-size: calc(2.5em * 1.2);
+    }
+}
+
+@media (min-width: 60em) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    body[data-begin] > h1 {
+        margin-top: 10vh;
+        font-size: 4em;
+    }
+    
+    a[href$="login"] {
+        font-size: 3em;
+    }
+    
+    a[href$="login"]:hover {
+        font-size: calc(3em * 1.2);
+    }
+}
