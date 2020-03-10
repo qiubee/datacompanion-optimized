@@ -25,7 +25,7 @@
   "homepage": "https://github.com/qiubee/datacompanion-optimized#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "hbs": "^4.1.0"
+    "express-handlebars": "^3.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
