@@ -19,4 +19,16 @@ router.get("/sleutel", function(req, res) {
     });
 });
 
+router.get("/kies-datahulpje", function(req, res) {
+    res.render("companion", {
+        title: "Kies je eigen datahulpje"
+    });
+});
+
+router.get("/overzicht", function(req, res) {
+    res.render("overview", {
+        title: "Overzicht"
+    });
+});
+
 module.exports = router;
