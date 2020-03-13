@@ -18,15 +18,15 @@ Het datahulpje neemt je mee in de wereld van informatie. Leer hoe informatie wor
 
 Open de terminal en doe het volgende:
 
-1. Kopieer repo
+1. Kopieer repo:
 
     `git clone https://github.com/qiubee/datacompanion.git`
 
-2. Installeer dependencies
+2. Installeer dependencies:
 
     `npm install`
 
-3. Start server
+3. Start server:
 
     `npm run start` of voor development: `npm run dev`.
 
