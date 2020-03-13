@@ -16,7 +16,7 @@ Het datahulpje neemt je mee in de wereld van informatie. Leer hoe informatie wor
 
 ## Installeren
 
-Open de terminal en doe het volgende:
+Open de terminal:
 
 1. Kopieer repo:
 
