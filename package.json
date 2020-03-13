@@ -4,7 +4,8 @@
   "description": "A digital datacompanion to help OBA-members control their data.",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app/app.js",
+    "dev": "nodemon app.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
