@@ -3,7 +3,7 @@ const hbs = require("express-handlebars");
 
 // server
 const app = express();
-const port = 8080;
+const port = 8000;
 
 // set handlebars as templating engine
 app.set("view engine", "hbs");
