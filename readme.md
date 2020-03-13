@@ -8,6 +8,30 @@ Vaak heb je het niet door, maar op het internet wordt heel veel informatie verst
 
 Het datahulpje neemt je mee in de wereld van informatie. Leer hoe informatie wordt verzameld en hoe je informatie deelt. Leer hoe je informatie aan kan passen en wat je met informatie kan doen. Het datahulpje geeft je een overzicht van jouw informatie, zodat je zelf kunt bepalen wat je met de informatie wil doen.
 
+## Inhoud
+
+1. [Installeren](#installeren)
+2. [Hoe werkt het datahulpje?](#hoe-werkt-het-datahulpje)
+3. [Features](#features)
+
+## Installeren
+
+Open de terminal en doe het volgende:
+
+1. Kopieer repo:
+
+    `git clone https://github.com/qiubee/datacompanion.git`
+
+2. Installeer dependencies:
+
+    `npm install`
+
+3. Start server:
+
+    `npm run start` of voor development: `npm run dev`.
+
+4. Open `localhost:8000` in de browser
+
 ## Hoe werkt het datahulpje?
 
 1. Kies eerst jouw eigen datahulpje.
@@ -31,6 +55,8 @@ Het datahulpje neemt je mee in de wereld van informatie. Leer hoe informatie wor
 * Een informatiepagina waar je kunt kiezen welke informatie je wilt delen en wilt afschermen.
 * Een aanbevelingenspagina die veranderd op basis van de informatie die jij gedeeld hebt.
 * Praat met andere mensen over een boek als je het boek ook hebt geleend.
+
+
 
 <!-- What external data source is featured in your project and what are its properties 🌠 -->
 
