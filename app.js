@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const hbs = require("express-handlebars");
+const bodyParser = require("body-parser");
 
 // server
 const app = express();
@@ -15,14 +16,16 @@ app.engine( "hbs", hbs( {
     partialsDir: __dirname + "/views/partials/"
   }));
 
-// use "public" folder for static files
+// use public folder for static files
 app.use(express.static("public"));
 
+// use body-parser to read data from post requests
+app.use(bodyParser.urlencoded({ extended: false }));
+
 // routing
-// import routes from router file
 const router = require("./router/router");
 app.use("/", router);
 
 app.listen(port, function () {
-    console.log(`Listening on port ${port}`);
+    console.log(`Listening on port ${port}\n(Go to \u001b[1m\u001b[36mlocalhost:${port}\u001b[0m in your browser)`);
 });
