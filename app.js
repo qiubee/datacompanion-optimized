@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const hbs = require("express-handlebars");
 
@@ -20,8 +21,6 @@ app.use(express.static("public"));
 // routing
 // import routes from router file
 const router = require("./router/router");
-
-// register partials
 app.use("/", router);
 
 app.listen(port, function () {
