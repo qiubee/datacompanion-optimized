@@ -31,4 +31,17 @@ router.get("/overzicht", function(req, res) {
     });
 });
 
+router.post("/login", function(req, res) {
+    // "database"
+    const user1 = {email: "m@m.m", key: "4k8nd$d20s"};
+    const email = req.body.email;
+    const key = req.body.key;
+    console.log(email, key);
+    if (user1.email === email && user1.key === key) {
+        res.redirect('/kies-datahulpje');
+    } else {
+        res.redirect("/login");
+    }
+});
+
 module.exports = router;
