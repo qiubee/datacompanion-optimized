@@ -13,7 +13,6 @@
     "url": "git+https://github.com/qiubee/datacompanion-optimized.git"
   },
   "keywords": [
-    "books",
     "server",
     "node",
     "express"
@@ -25,6 +24,7 @@
   },
   "homepage": "https://github.com/qiubee/datacompanion-optimized#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0"
   },
