@@ -157,14 +157,121 @@ form[action$="login"] button {
     grid-row: 3;
 }
 
+/* choose companion */
+body[data-choose] {
+    display: initial;
+}
+
+body[data-choose] > h1 {
+    height: 0;
+    margin: auto;
+    translate: 0 2vh;
+    font-size: 2em;
+    text-align: center;
+}
+
+body[data-choose] > h1:first-letter {
+    font-size: 135%;
+    text-align: center;
+}
+
+body[data-choose] h1.reposition {
+    translate: 0 calc(100vh / 15);
+    animation: hide 1s ease-in-out;
+    transition: translate 1s ease-in-out;
+}
+
+form[action$="datahulpje"] {
+    display: flex;
+    flex-direction: row;
+}
+
+form[action$="datahulpje"] label {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    font-size: 15vw;
+    transition: width 1s ease, font-size 0.75s ease-in-out;
+}
+
+form[action$="datahulpje"] label:hover {
+    width: 75vw;
+    font-size: 22.5vw;
+    cursor: pointer;
+}
+
+form[action$="datahulpje"] label:first-of-type {
+    background-color: var(--vivi-color);
+    color: var(--vivi-text-color);
+}
+
+form[action$="datahulpje"] label:last-of-type  {
+    background-color: var(--momo-color);
+    color: var(--momo-text-color);
+}
+
+form[action$="datahulpje"] input[type="submit"] {
+    position: absolute;
+    align-self: flex-end;
+    font-family: var(--main-font);
+    font-weight: 900;
+    font-size: 2em;
+    width: 100vw;
+    background: var(--momo-text-color);
+    color: white;
+    padding: 1em;
+    text-decoration: underline;
+    mix-blend-mode: multiply;
+    text-shadow: none;
+    border: none;
+}
+
+form[action$="datahulpje"] input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+form[action$="datahulpje"] label.selected {
+    font-size: 6em;
+    width: 100vw;
+}
+
+form[action$="datahulpje"] label.selected span {
+    translate: 0 calc(100vh / 3);
+    transition: translate 1.25s ease-in-out;
+}
+
+form[action$="datahulpje"] label.unselected {
+    width: 0;
+}
+
+form[action$="datahulpje"] label.unselected span {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+form[action$="datahulpje"] label.selected, form[action$="datahulpje"] label.unselected {
+    pointer-events: none;
+}
+
 /* -- Queries -- */
 @media (min-width: 30em) and (max-width: 60em) {
     h1 {
         font-size: 1.75em;
     }
     
-    body[data-begin] > h1 {
+    body[data-begin] > h1, body[data-choose] > h1 {
         font-size: 3em;
+    }
+
+    form[action$="datahulpje"] label {
+        font-size: 10vw;
+    }
+
+    form[action$="datahulpje"] label:hover {
+        font-size: 14vw;
     }
     
     a[href$="login"] {
@@ -181,9 +288,20 @@ form[action$="login"] button {
         font-size: 2em;
     }
     
+    body[data-begin] > h1, body[data-choose] > h1 {
+        font-size: 4em;
+    }
+
     body[data-begin] > h1 {
         margin-top: 10vh;
-        font-size: 4em;
+    }
+
+    form[action$="datahulpje"] label {
+        font-size: 5vw;
+    }
+
+    form[action$="datahulpje"] label:hover {
+        font-size: 7.5vw;
     }
     
     a[href$="login"] {
@@ -192,5 +310,16 @@ form[action$="login"] button {
     
     a[href$="login"]:hover {
         font-size: calc(3em * 1.2);
+    }
+}
+
+/* animations */
+@keyframes hide {
+    from {
+        opacity: 1;
+    } 50% {
+        opacity: 0;
+    } to {
+        opacity: 1;
     }
 }
