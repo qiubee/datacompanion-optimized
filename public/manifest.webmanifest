@@ -3,7 +3,7 @@
     "name": "Het Datahulpje",
     "description": "Met het datahulpje kun je jouw informatie van de OBA onderzoeken. Het datahulpje geeft je een overzicht van jouw informatie, zodat je zelf kunt bepalen wat je met de informatie wil doen.",
     "icons": [{}],
-    "start_url": "/",
+    "start_url": "/login",
     "display": "standalone",
     "orientation": "portrait",
     "background_color": "#e1e8ff",
