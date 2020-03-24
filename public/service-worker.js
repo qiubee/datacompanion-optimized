@@ -9,7 +9,14 @@ self.addEventListener("install", function(event) {
   });
 
 self.addEventListener("fetch", function(event) {
-  console.log("The service worker is serving the asset...");
+  console.log("The service worker is serving assets...");
+
+  // block requests that are not GET
+  if (event.request.method !== "GET") {
+    console.log("Stopped serving assets", event.request.method, event.request.url);
+    return;
+  }
+
   // respond with (give back) cache assets
   event.respondWith(fromCache(event.request));
   // add updated assets to cache
@@ -28,9 +35,13 @@ async function fromCache(request) {
 }
 
 async function updateCache(request) {
-  const cache = await openCache(CACHE);
-  const response = await fetch(request);
-  return cache.put(request, response);
+  try {
+    const cache = await openCache(CACHE);
+    const response = await fetch(request);
+    return cache.put(request, response);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 async function openCache(cacheName) {
