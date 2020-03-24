@@ -1,5 +1,6 @@
 :root {
     --main-font: Lullaby, Avenir, "Lucida Grande", "Segoe UI", Helvetica, Roboto, Ubuntu, Arial, sans-serif;
+    --companion-font: Gribouille, Lullaby, Avenir, "Lucida Grande", "Segoe UI", Helvetica, Roboto, Ubuntu, Arial, sans-serif;
     --oba-font: Avenir, "Lucida Grande", "Segoe UI", Helvetica, Roboto, Ubuntu, Arial, sans-serif;
     --vivi-color: #e1e8ff;
     --vivi-text-color: #383a40;
@@ -32,6 +33,11 @@
     src: url("../fonts/lullaby.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Gribouille";
+    src: url("../fonts/gribouille.ttf") format("truetype");
+}
+
 /* set margin & padding to default */
 body, ul, h1, h2, h3, p {
     margin: 0;
@@ -54,7 +60,7 @@ input[name="companion"], aside section:first-of-type li span:nth-child(2) {
     left: -999em;
 }
 
-/* -- global -- */
+/* -- Global -- */
 body[data-begin], body[data-login] {
     height: 100vh;
 }
@@ -77,7 +83,7 @@ h1:first-letter {
     font-size: 135%;
 }
 
-/* -- specific -- */
+/* -- Main -- */
 body[data-begin] {
     background-image: linear-gradient( 155deg, var(--vivi-color) 15%, var(--momo-color) 90%);
     text-align: center;
@@ -98,7 +104,7 @@ a[href$="login"] {
     text-transform: uppercase;
     margin: auto auto 10vh auto;
     padding: 0.15em;
-    transition: font-size ease 0.25s, translate ease 0.75s;
+    transition: font-size ease 0.25s, transform ease 0.75s;
 }
 
 a[href$="login"]:before {
@@ -109,7 +115,7 @@ a[href$="login"]:before {
 }
 
 a[href$="login"]:hover {
-    translate: 0 0.25em;
+    transform: translate(0, 0.25em);
     font-size: calc(2em * 1.2);
 }
 
@@ -159,7 +165,7 @@ body[data-choose] {
 body[data-choose] > h1 {
     height: 0;
     margin: auto;
-    translate: 0 2vh;
+    transform: translate(0, 2vh);
     font-size: 2em;
     text-align: center;
 }
@@ -170,44 +176,45 @@ body[data-choose] > h1:first-letter {
 }
 
 body[data-choose] h1.reposition {
-    translate: 0 calc(100vh / 15);
+    transform: translate(0, calc(100vh / 15));
     animation: hide 1s ease-in-out;
-    transition: translate 1s ease-in-out;
+    transition: transform 1s ease-in-out;
 }
 
-form[action$="datahulpje"] {
+form[action$="companion"] {
     display: flex;
     flex-direction: row;
 }
 
-form[action$="datahulpje"] label {
+form[action$="companion"] label {
     display: flex;
     flex-direction: column;
     width: 50vw;
     height: 100vh;
     text-align: center;
     justify-content: center;
+    font-family: var(--companion-font);
     font-size: 15vw;
     transition: width 1s ease, font-size 0.75s ease-in-out;
 }
 
-form[action$="datahulpje"] label:hover {
+form[action$="companion"] label:hover {
     width: 75vw;
     font-size: 22.5vw;
     cursor: pointer;
 }
 
-form[action$="datahulpje"] label:first-of-type {
+form[action$="companion"] label:first-of-type {
     background-color: var(--vivi-color);
     color: var(--vivi-text-color);
 }
 
-form[action$="datahulpje"] label:last-of-type  {
+form[action$="companion"] label:last-of-type  {
     background-color: var(--momo-color);
     color: var(--momo-text-color);
 }
 
-form[action$="datahulpje"] input[type="submit"] {
+form[action$="companion"] input[type="submit"] {
     position: absolute;
     align-self: flex-end;
     font-family: var(--main-font);
@@ -223,30 +230,30 @@ form[action$="datahulpje"] input[type="submit"] {
     border: none;
 }
 
-form[action$="datahulpje"] input[type="submit"]:hover {
+form[action$="companion"] input[type="submit"]:hover {
     cursor: pointer;
 }
 
-form[action$="datahulpje"] label.selected {
+form[action$="companion"] label.selected {
     font-size: 6em;
     width: 100vw;
 }
 
-form[action$="datahulpje"] label.selected span {
-    translate: 0 calc(100vh / 3);
-    transition: translate 1.25s ease-in-out;
+form[action$="companion"] label.selected span {
+    transform: translate(0, calc(100vh / 3));
+    transition: transform 1.25s ease-in-out;
 }
 
-form[action$="datahulpje"] label.unselected {
+form[action$="companion"] label.unselected {
     width: 0;
 }
 
-form[action$="datahulpje"] label.unselected span {
+form[action$="companion"] label.unselected span {
     opacity: 0;
     transition: opacity 0.4s ease;
 }
 
-form[action$="datahulpje"] label.selected, form[action$="datahulpje"] label.unselected {
+form[action$="companion"] label.selected, form[action$="companion"] label.unselected {
     pointer-events: none;
 }
 
@@ -434,11 +441,11 @@ body[data-overview] aside section:first-of-type svg {
         font-size: 3em;
     }
 
-    form[action$="datahulpje"] label {
+    form[action$="companion"] label {
         font-size: 10vw;
     }
 
-    form[action$="datahulpje"] label:hover {
+    form[action$="companion"] label:hover {
         font-size: 14vw;
     }
     
@@ -464,11 +471,11 @@ body[data-overview] aside section:first-of-type svg {
         margin-top: 10vh;
     }
 
-    form[action$="datahulpje"] label {
+    form[action$="companion"] label {
         font-size: 5vw;
     }
 
-    form[action$="datahulpje"] label:hover {
+    form[action$="companion"] label:hover {
         font-size: 7.5vw;
     }
     
