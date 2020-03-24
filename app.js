@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const hbs = require("express-handlebars");
 const bodyParser = require("body-parser");
+const router = require("./routes/router");
 
 // server
 const app = express();
@@ -23,7 +24,6 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // routing
-const router = require("./router/router");
 app.use("/", router);
 
 app.listen(port, function () {
