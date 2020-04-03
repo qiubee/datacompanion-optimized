@@ -1,0 +1,45 @@
+<body data-overview>
+    <div>
+        <header>
+            <img src="/images/oba-logo.jpg"
+                alt='De letters "O", "B" en "A" die samen het logo van de Openbare Bibliotheek Amsterdam vormen'>
+        </header>
+        <main>
+            <h1>Boek aanbevelingen</h1>
+            <section>
+                <div>
+                    <h2>Populair</h2>
+                    <p>Gebaseerd op leengeschiedenis</p>
+                </div>
+                <div>
+                    {{!-- {{for loop articles}} --}}
+                </div>
+            </section>
+        </main>
+    </div>
+    <aside data-companion={{companion}}>
+        <div>
+            <h2>Informatie overzicht</h2>
+            <p>In het informatie overzicht kun je jouw informatie bekijken. Op basis van deze informatie worden de aanbevelingen gemaakt. Om de aanbevelingen niet meer te personaliseren doe je door je informatie af te schermen. Verplaats informatie in de kluis om het af te schermen of in de prullenbak om informatie te verwijderen.</p>
+            <section>
+                <h3>Jouw informatie</h3>
+                <ul>
+                    <li><span>Naam</span><span>:</span><span>{{name}}</span></li>
+                    <li><span>Initialen</span><span>:</span><span>{{initials}}</span></li>
+                    <li><span>Geslacht</span><span>:</span><span>{{gender}}</span></li>
+                    <li><span>Geboortedatum</span><span>:</span><span>{{dateOfBirth}}</span></li>
+                    <li><span>Adres</span><span>:</span><span>{{adress}}</span></li>
+                    <li><span>Huisnummer</span><span>:</span><span>{{housenumber}}</span></li>
+                    <li><span>Postcode</span><span>:</span><span>{{zipcode}}</span></li>
+                    <li><span>Woonplaats</span><span>:</span><span>{{residence}}</span></li>
+                    <li><span>Telefoonnummer</span><span>:</span><span>{{phonenumber}}</span></li>
+                    <li><span>E-mail</span><span>:</span><span>{{email}}</span></li>
+                    <li><span>Vestiging</span><span>:</span><span>{{location}}</span></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Leengeschiedenis</h3>
+            </section>
+        </div>
+    </aside>
+</body>
