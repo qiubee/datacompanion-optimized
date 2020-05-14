@@ -1,4 +1,44 @@
 {
+	"version": 1,
+	"name": "datacompanion-optimized",
+	"builds": [{ "src": "server.js", "use": "@now/node-server"}],
+	"routes": [
+		{
+			"src": "/",
+			"dest": "/router.js",
+			"methods": ["GET"]
+		},
+		{
+			"src": "/login",
+			"dest": "/router.js",
+			"methods": ["GET"]
+		},
+		{
+			"src": "/sleutel",
+			"dest": "/router.js",
+			"methods": ["GET"]
+		},
+		{
+			"src": "/kies-datahulpje",
+			"dest": "/router.js",
+			"methods": ["GET"]
+		},
+		{
+			"src": "/overzicht",
+			"dest": "/router.js",
+			"methods": ["GET"]
+		},
+		{
+			"src": "/login",
+			"dest": "/router.js",
+			"methods": ["POST"]
+		},
+		{
+			"src": "/companion",
+			"dest": "/router.js",
+			"methods": ["POST"]
+		},
+	],
 	"env": {
 		"API_KEY": "@api-key",
 		"API_SECRET": "@api-secret",
