@@ -1,6 +1,6 @@
 // from example: https://serviceworke.rs/strategy-cache-and-update_service-worker_doc.html
 const CACHE = "datacompanion-v1";
-const assets = ["./css/index.css", "./js/index.js", "./images/oba-logo.jpg"];
+const assets = ["./css/index.css", "./js/index.min.js", "./images/oba-logo.jpg"];
 
 self.addEventListener("install", function(event) {
     console.log("The service worker is installing...");
