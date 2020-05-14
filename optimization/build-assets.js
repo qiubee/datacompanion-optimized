@@ -15,4 +15,4 @@ function buildAssets () {
 	assets();
 }
 
-return buildAssets();
+buildAssets();
