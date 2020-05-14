@@ -7,7 +7,7 @@
     "dev": "nodemon server.js",
     "prestart": "npm run build",
     "start": "node server.js",
-	"prebuild": "del ./public",
+    "prebuild": "del ./public",
     "build": "concurrently \"npm:build:*\"",
     "build:js": "node optimization/build-js.js",
     "build:css": "node optimization/build-css.js",
@@ -49,6 +49,6 @@
     "nodemon": "^2.0.2"
   },
   "engines": {
-	  "node": "13.x"
+    "node": "13.x"
   }
 }
