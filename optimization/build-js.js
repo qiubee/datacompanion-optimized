@@ -4,7 +4,7 @@ const babel = require("gulp-babel");
 const uglify = require("gulp-uglify");
 
 function buildJS () {
-	gulp.src("src/js/**/*.js", { nocomment: true })
+	gulp.src("src/js/**/*.js")
 		.pipe(babel({
 			presets: ["babel-preset-env"]
 		}))
