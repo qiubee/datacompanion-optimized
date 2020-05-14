@@ -13,6 +13,7 @@ Het datahulpje neemt je mee in de wereld van informatie. Leer hoe informatie wor
 1. [Installeren](#installeren)
 2. [Hoe werkt het datahulpje?](#hoe-werkt-het-datahulpje)
 3. [Features](#features)
+4. [Optimalisaties](#optimalisaties)
 
 ## Installeren
 
@@ -86,3 +87,7 @@ Met behulp van `gulp-babel` wordt de code getransformeerd naar code die voor oud
 ### Comprimeren
 
 Met behulp van `gulp-imagemin` worden alle afbeeldingen gecomprimeerd naar 50% van de kwaliteit voor JPG-afbeeldingen en worden de PNG-afbeeldingen gecomprimeerd tot [optimalisatielevel 4](https://github.com/imagemin/imagemin-optipng#optimizationlevel). Hiermee worden de afbeeldingen niet te groot van formaat.
+
+## License
+
+[**BSD-2-Clause**](LICENSE)
