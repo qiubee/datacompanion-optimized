@@ -6,7 +6,7 @@ const router = require("./routes/router");
 
 // server
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 // set handlebars as templating engine
 app.set("view engine", "hbs");
