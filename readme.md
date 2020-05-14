@@ -16,21 +16,34 @@ Het datahulpje neemt je mee in de wereld van informatie. Leer hoe informatie wor
 
 ## Installeren
 
-Open de terminal:
+Om het project te installeren, open de terminal en volg deze stappen:
 
-1. Kopieer repo:
+**1. Kopieer repository:**
 
-    `git clone https://github.com/qiubee/datacompanion.git`
+    ```bash
+    # Kopieer de repository
+    git clone https://github.com/qiubee/datacompanion-optimized.git
+    
+    # Navigeer naar de map
+    cd datacompanion-optimized
+    ```
 
-2. Installeer dependencies:
+**2. Installeer dependencies:**
 
-    `npm install`
+    ```
+    npm install
+    ```
 
-3. Start server:
+**3. Start server:**
 
-    `npm run start` of voor development: `npm run dev`.
+    ```bash
+    npm run start
 
-4. Open `localhost:8000` in de browser
+    # Voor development
+    npm run dev
+    ```
+
+**4. Open `localhost:8000` in de browser.**
 
 ## Hoe werkt het datahulpje?
 
@@ -56,10 +69,20 @@ Open de terminal:
 * Een aanbevelingenspagina die veranderd op basis van de informatie die jij gedeeld hebt.
 * Praat met andere mensen over een boek als je het boek ook hebt geleend.
 
+## Optimalisaties
 
+* [Minimaliseren](#minimaliseren)
+* [Browser toegankelijkheid](#browser-toegankelijkheid)
+* [Comprimeren](#comprimeren)
 
-<!-- What external data source is featured in your project and what are its properties 🌠 -->
+### Minimaliseren
 
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
+Met behulp van `gulp-uglify` worden alle client-side javascript bestanden geminimaliseerd naar een regel. Ook heb ik in het `build-js.js`-bestand alle javascript-bestanden samengevoegd tot één bestand. En met behulp van `gulp-csso` wordt het css bestand geminimaliseerd naar een regel.
 
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+### Browser toegankelijkheid
+
+Met behulp van `gulp-babel` wordt de code getransformeerd naar code die voor oude browsers ook te begrijpen zijn.
+
+### Comprimeren
+
+Met behulp van `gulp-imagemin` worden alle afbeeldingen gecomprimeerd naar 50% van de kwaliteit voor JPG-afbeeldingen en worden de PNG-afbeeldingen gecomprimeerd tot [optimalisatielevel 4](https://github.com/imagemin/imagemin-optipng#optimizationlevel). Hiermee worden de afbeeldingen niet te groot van formaat.
