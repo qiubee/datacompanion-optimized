@@ -37,7 +37,7 @@
 			"src": "/companion",
 			"dest": "/router.js",
 			"methods": ["POST"]
-		},
+		}
 	],
 	"env": {
 		"API_KEY": "@api-key",
