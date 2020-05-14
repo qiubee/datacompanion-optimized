@@ -1,0 +1,16 @@
+{
+	"env": {
+		"API_KEY": "@api-key",
+		"API_SECRET": "@api-secret",
+		"USER_1": "@user-1",
+		"USER_2": "@user-2"
+	},
+	"build": {
+		"env": {
+			"API_KEY": "@api-key",
+			"API_SECRET": "@api-secret",
+			"USER_1": "@user-1",
+			"USER_2": "@user-2"
+		}
+	}
+}
